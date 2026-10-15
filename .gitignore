@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.log
+node_modules/
+data/
+
+data/sample_resumes/*
+!data/sample_resumes/.gitkeep
