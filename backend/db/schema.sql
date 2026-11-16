@@ -17,3 +17,6 @@ CREATE TABLE IF NOT EXISTS chunks (
  content TEXT NOT NULL,
  embedding VECTOR(1024) -- Titan V2 default dimension
 )
+
+CREATE INDEX IF NOT EXISTS chunks_embedding_idx
+ ON chunks USING hnsw (embedding vector_cosine_ops);
